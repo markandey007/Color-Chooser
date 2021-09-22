@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            
+        }
+        select {
+            position: relative;
+            top: 50%;
+
+        }
+        footer
+        {
+            position: fixed;
+            bottom: 0%;
+            left: 1%;
+            
+        }
+        footer p {
+            font-weight: 1000;
+            font-size: 1.5vw;
+
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <select id="color" onchange="display()">
+        <option value="selectcolor">Select Color</option>
+        <option value="yellow">Yellow</option>
+        <option value="red">Red</option>
+        <option value="green">Green</option>
+        <option value="blue">Blue</option>
+    </select>
+</div>
+    <footer>
+        <p> Credit:= <a target="blank" href="https://github.com/Palaksharma23">Palak Sharma</a> <br>
+        Date:= 22-09-2021 </p> 
+    </footer>
+</body>
+<script>
+                function display()  
+                {  
+                    var value = document.getElementById("color").value;  
+                    if (value != "Select Color")  
+                    {  
+                        document.bgColor = value;  
+                        document.cookie = "color=" + value;  
+                    }  
+                }  
+                window.onload = function ()  
+                {  
+                    if (document.cookie.length != 0)  
+                    {  
+                        var array = document.cookie.split("=");  
+                        document.getElementById("color").value = array[1];  
+                        document.bgColor = array[1];  
+                    }  
+                }  
+</script>
+</html>
