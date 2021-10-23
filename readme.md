@@ -1,2 +1,2 @@
 # Color Chooser
-<img src="./dropdown.png"/>
+<img src="./dropdow.png"/>
